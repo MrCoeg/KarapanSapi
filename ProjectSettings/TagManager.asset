@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Canvas
+  - Character
+  - Enemy
+  - Obstacle
+  - BGM
   layers:
   - Default
   - TransparentFX

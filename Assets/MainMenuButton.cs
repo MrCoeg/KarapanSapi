@@ -6,6 +6,17 @@ public class MainMenuButton : MonoBehaviour
 {
     public SceneLoader sceneLoader;
 
+    private void Awake()
+    {
+        var playerProperties = Resources.Load<PlayerProperties>("Player Properties");
+        var music = GameObject.FindGameObjectsWithTag("BGM");
+
+        for (int i = 0; i < music.Length; i++)
+        {
+            music[i].GetComponent<AudioSource>().mute = !playerProperties.bgm;
+        }
+
+    }
     public void Back()
     {
         StartCoroutine(sceneLoader.ChangeScene(1));
@@ -23,7 +34,7 @@ public class MainMenuButton : MonoBehaviour
 
     public void Inventory()
     {
-        StartCoroutine(sceneLoader.ChangeScene(3));
+        StartCoroutine(sceneLoader.ChangeScene(6));
     }
 
     public void Setting()

@@ -10,6 +10,7 @@ public class Sapi : Item
     public float acceleration;
     public float speedLimit;
     public int price;
+    public float moveLineSpeed;
 
     public float nitroSpeed;
 

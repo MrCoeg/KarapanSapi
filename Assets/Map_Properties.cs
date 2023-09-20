@@ -15,7 +15,6 @@ public class Map_Properties : MonoBehaviour
     public Image lockImage;
     public MapInstance instance;
 
-
     public void Selected()
     {
         instance.selected = level + 2;

@@ -13,6 +13,8 @@ public class PlayerProperties : ScriptableObject
     public List<Sapi> ownedSapi;
     public List<Collectible> collectibles;
 
+    public bool bgm;
+
 
     public List<Aksesoris> ownedAksesoris;
     public CurrentPlayerProperties currentProperties;

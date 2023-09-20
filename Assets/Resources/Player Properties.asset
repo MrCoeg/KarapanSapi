@@ -14,11 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   money: 0
   pusaka: 0
-  energy: 0
+  energy: 10
   progress: 1
   ownedSapi: []
   collectibles:
   - {fileID: 11400000, guid: f34fef38dc5c8694da1072b7e24cd107, type: 2}
   - {fileID: 11400000, guid: 0025dc625c79224449930f65e3012ef0, type: 2}
+  bgm: 1
   ownedAksesoris: []
   currentProperties: {fileID: 0}

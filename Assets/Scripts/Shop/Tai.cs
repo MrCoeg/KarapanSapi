@@ -13,7 +13,7 @@ public class Tai : Collectible
     {
         CharacterMovement movement = GameObject.FindGameObjectWithTag("Character").GetComponent<CharacterMovement>();
         var instantiated = Instantiate(sprite, movement.gameObject.transform, true);
-        instantiated.AddComponent<Parallax>().background = instantiated;
+/*        instantiated.AddComponent<Parallax>().background = instantiated;*/
         movement.ManipulateSpeedLimit(speedAcceleration, speedDuration[upgradeProgress]);
     }
 }

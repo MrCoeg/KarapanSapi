@@ -18,6 +18,7 @@ MonoBehaviour:
   acceleration: 0
   speedLimit: 0
   price: 0
+  moveLineSpeed: 0
   nitroSpeed: 0
   prefabSapi: {fileID: 3295945724534919875, guid: c9895cb0ee3b131428b62ace16c20167, type: 3}
   prefabSapiGameplay: {fileID: 5771148853490944268, guid: 2e81523efe2e0334da1fbb4992acfb7f, type: 3}
