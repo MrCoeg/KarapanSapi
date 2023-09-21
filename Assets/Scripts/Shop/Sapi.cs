@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Sapi", menuName = "Item/Sapi")]
 public class Sapi : Item
 {
-
+   
     public float speed;
     public float acceleration;
     public float speedLimit;

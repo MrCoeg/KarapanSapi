@@ -15,6 +15,8 @@ public class PlayerProperties : ScriptableObject
 
     public bool bgm;
 
+    public List<Sapi> shopShapi;
+
 
     public List<Aksesoris> ownedAksesoris;
     public CurrentPlayerProperties currentProperties;

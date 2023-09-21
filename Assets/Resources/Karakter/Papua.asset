@@ -21,5 +21,5 @@ MonoBehaviour:
   moveLineSpeed: 7
   nitroSpeed: 10
   prefabSapi: {fileID: 3295945724534919875, guid: c9895cb0ee3b131428b62ace16c20167, type: 3}
-  prefabSapiGameplay: {fileID: 0}
+  prefabSapiGameplay: {fileID: 1892815497644769706, guid: 3a3add8c534c33845b79ca4c5f525e18, type: 3}
   playerProperties: {fileID: 11400000, guid: 6521f9adafc720b49a75d9a88f99252f, type: 2}

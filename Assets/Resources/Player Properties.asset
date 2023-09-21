@@ -21,5 +21,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f34fef38dc5c8694da1072b7e24cd107, type: 2}
   - {fileID: 11400000, guid: 0025dc625c79224449930f65e3012ef0, type: 2}
   bgm: 1
+  shopShapi:
+  - {fileID: 11400000, guid: d594a94742778a24798192d024948d2c, type: 2}
+  - {fileID: 11400000, guid: 213e67f60b9fd014ca9a7b40753b4696, type: 2}
+  - {fileID: 11400000, guid: e78b547e18039c34d8d6d5617f7fb221, type: 2}
   ownedAksesoris: []
-  currentProperties: {fileID: 0}
+  currentProperties: {fileID: 11400000, guid: df6079148acbd6f4ab0f6e281fce7b4b, type: 2}

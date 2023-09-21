@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class EnemyMovement : MonoBehaviour
 {
@@ -15,7 +16,8 @@ public class EnemyMovement : MonoBehaviour
     private bool ableToUsenNitro;
 
     private bool transitioning;
-
+    public Sprite[] taisprites;
+    public Light2D light2d;
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -53,6 +55,7 @@ public class EnemyMovement : MonoBehaviour
     public void manipulate(float manipulationSpeed, float duration)
     {
         StartCoroutine(ManipulateSpeedLimit(manipulationSpeed, duration));
+        StartCoroutine(effectTai(duration));
     }
 
 
@@ -156,5 +159,24 @@ public class EnemyMovement : MonoBehaviour
                 Down();
             }
         }
+    }
+
+    public IEnumerator effectTai(float duration)
+    {
+        light2d.gameObject.SetActive(true);
+        float time = 0;
+        int counter = 0;
+        while(time < duration)
+        {
+            
+            time += 0.01f;
+            counter %= taisprites.Length;
+         
+            light2d.lightCookieSprite = taisprites[counter];
+            yield return new WaitForSeconds(0.01f);
+            
+        }
+        light2d.gameObject.SetActive(false);
+
     }
 }

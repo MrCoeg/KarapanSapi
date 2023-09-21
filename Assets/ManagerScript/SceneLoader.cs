@@ -4,12 +4,13 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+
 public class SceneLoader : MonoBehaviour
 {
 
     public Sprite[] loadingSprites;
     public Sprite[] cowboySprites;
- 
+
     public GameObject loadingParent;
     public GameObject cowboy;
     public GameObject loadingBar;

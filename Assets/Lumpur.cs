@@ -18,6 +18,11 @@ public class Lumpur : MonoBehaviour
         {
 
                 var movement = collision.gameObject.GetComponent<CharacterMovement>();
+
+            if (movement.line != GetComponent<SpriteRenderer>().sortingOrder)
+            {
+                return;
+            }
                 var speed = movement.m_speed - (movement.m_speed * 0.7f);
                 StartCoroutine(movement.ManipulateSpeedLimit(-speed, 2));
 

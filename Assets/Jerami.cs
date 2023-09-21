@@ -13,12 +13,17 @@ public class Jerami : MonoBehaviour
 
             if (movement.isNitro || movement.immune)
             {
+
                 var playerProperties = Resources.Load<PlayerProperties>("Player Properties");
                 playerProperties.money += Random.Range(2, 10);
                 Destroy(this.gameObject);
             }
             else
             {
+                if (movement.line != GetComponent<SpriteRenderer>().sortingOrder)
+                {
+                    return;
+                }
                 StartCoroutine( movement.ManipulateSpeedLimit(movement.m_speed, 1));
             }
         }

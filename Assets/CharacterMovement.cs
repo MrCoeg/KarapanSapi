@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Cinemachine;
+using UnityEngine.Rendering.Universal;
 
 public class CharacterMovement : MonoBehaviour
 {
     public CurrentPlayerProperties properties;
     private SpriteRenderer spriteRenderer;
     private Sapi stats;
-
+    public Light2D light2d;
     public Transform nitroEffect;
     private Image nitroImage;
 
@@ -18,7 +19,7 @@ public class CharacterMovement : MonoBehaviour
     public bool isNitro;
     public float moveLineSpeed;
 
-    private int line = 1;
+    public int line = 1;
 
 
     private bool transitioning;
@@ -232,6 +233,8 @@ public class CharacterMovement : MonoBehaviour
         {
             Resources.Load<PlayerProperties>("Player Properties").collectibles[0].Use();
             GameObject.Find("SusuSound").GetComponent<AudioSource>().Play();
+            var a = (Susu)Resources.Load<PlayerProperties>("Player Properties").collectibles[0];
+            StartCoroutine(StartSusu(a.speedDuration[a.upgradeProgress]));
         }
         else
         {
@@ -241,6 +244,20 @@ public class CharacterMovement : MonoBehaviour
         }
         itemOwned = false;
         equipmentButton.interactable = false;
+    }
+
+    public IEnumerator StartSusu(float duration) {
+        light2d.gameObject.SetActive(true);
+        float time = 0;
+        int counter = 0;
+        while (time < duration)
+        {
+
+            time += 0.01f;
+            yield return new WaitForSeconds(0.01f);
+
+        }
+        light2d.gameObject.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
