@@ -1475,6 +1475,8 @@ MonoBehaviour:
   loadingParent: {fileID: 4799961602040779871, guid: 44ad1a5f8edfa3a479819e3392ab2adf, type: 3}
   cowboy: {fileID: 2569860754974469118, guid: dd13ab36d67a5cf4a96fa9fe1e32edb2, type: 3}
   loadingBar: {fileID: 9080511698797958267, guid: c03b90ad32262ab41ab01563d0f5101e, type: 3}
+  toInstantiatedAudio: {fileID: 2607005992673410046, guid: 968e78a58a7d6d0418b5d1e166bd3c1e, type: 3}
+  audioToPlay: {fileID: 0}
 --- !u!4 &929398977
 Transform:
   m_ObjectHideFlags: 0
@@ -1865,9 +1867,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MainMenuAnimation, Assembly-CSharp
-        m_MethodName: MenuToBuy
+      - m_Target: {fileID: 919242221}
+        m_TargetAssemblyTypeName: MainMenuButton, Assembly-CSharp
+        m_MethodName: Inventory
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

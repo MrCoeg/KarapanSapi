@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Jerami : MonoBehaviour
 {
-    
+    public AudioSource jerami;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Character")
         {
             var movement = collision.gameObject.GetComponent<CharacterMovement>();
 
-            if (movement.isNitro)
+            if (movement.isNitro || movement.immune)
             {
                 var playerProperties = Resources.Load<PlayerProperties>("Player Properties");
                 playerProperties.money += Random.Range(2, 10);
@@ -35,5 +35,7 @@ public class Jerami : MonoBehaviour
                 StartCoroutine(movement.ManipulateSpeedLimit(movement.m_speed, 1));
             }
         }
+
+        jerami.Play();
     }
 }

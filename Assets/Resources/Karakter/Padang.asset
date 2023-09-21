@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0d2520342d5fced4baf56d7c7cc9dc72, type: 3}
-  m_Name: Sapi Madura 2
+  m_Name: Padang
   m_EditorClassIdentifier: 
   isOwned: 0
-  id: 1
+  id: 0
   speed: 1
-  acceleration: 0
-  speedLimit: 0
+  acceleration: 4
+  speedLimit: 15
   price: 0
-  moveLineSpeed: 0
-  nitroSpeed: 0
-  prefabSapi: {fileID: 3295945724534919875, guid: c9895cb0ee3b131428b62ace16c20167, type: 3}
-  prefabSapiGameplay: {fileID: 5771148853490944268, guid: 2e81523efe2e0334da1fbb4992acfb7f, type: 3}
+  moveLineSpeed: 7
+  nitroSpeed: 10
+  prefabSapi: {fileID: 3295945724534919875, guid: eaf2b838b80852146ae439430ab7992c, type: 3}
+  prefabSapiGameplay: {fileID: 0}
   playerProperties: {fileID: 11400000, guid: 6521f9adafc720b49a75d9a88f99252f, type: 2}

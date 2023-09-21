@@ -16,5 +16,5 @@ MonoBehaviour:
   id: 0
   upgradeProgress: 0
   sprite: {fileID: 0}
-  speedDuration: 0200000003000000040000000500000005000000
+  speedDuration: 0500000007000000090000000a0000000a000000
   speedAcceleration: 0

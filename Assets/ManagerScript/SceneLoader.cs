@@ -15,7 +15,8 @@ public class SceneLoader : MonoBehaviour
     public GameObject loadingBar;
     private Image loadingImage;
     private Image cowboyImage;
-
+    public GameObject toInstantiatedAudio;
+    public AudioSource audioToPlay;
     private bool doneChangeScene;
 
     private void Awake()
@@ -23,9 +24,9 @@ public class SceneLoader : MonoBehaviour
         if (loadingParent != null)
         {
             loadingImage = loadingParent.GetComponent<Image>();
-            
-        }
+            audioToPlay = Instantiate(toInstantiatedAudio).GetComponent<AudioSource>();
 
+        }
     }
 
     private void Start()
@@ -72,7 +73,7 @@ public class SceneLoader : MonoBehaviour
         }
         cowboyImage = Instantiate(cowboy, parent, false).GetComponent<Image>();
         var instantiatedLoadingBar = Instantiate(loadingBar, parent, false).GetComponentsInChildren<Image>()[1];
-
+        audioToPlay.Play();
         StartCoroutine(cowboyAnimation());
 
         for (int i = 0; i < 100; i++)
@@ -85,6 +86,40 @@ public class SceneLoader : MonoBehaviour
 
         yield return new WaitForSecondsRealtime(2f);
         StartCoroutine(ChangeScene(sceneIndex));
+    }
+
+    public IEnumerator callAnimation(GameObject toShow)
+    {
+        Transform parent = GameObject.FindGameObjectWithTag("Canvas").transform;
+        GameObject instantiated = Instantiate(loadingParent, parent, false);
+        loadingImage = instantiated.GetComponent<Image>();
+
+        for (int i = 0; i < loadingSprites.Length; i++)
+        {
+            loadingImage.sprite = loadingSprites[i];
+
+            yield return new WaitForSeconds(0.03f);
+        }
+        var cowboyInstantiated = Instantiate(cowboy, parent, false);
+        cowboyImage = cowboyInstantiated.GetComponent<Image>();
+
+        var instantiatedLoadingBara = Instantiate(loadingBar, parent, false);
+        var instantiatedLoadingBar = instantiatedLoadingBara.GetComponentsInChildren<Image>()[1];
+        StartCoroutine(cowboyAnimation());
+
+        for (int i = 0; i < 100; i++)
+        {
+            instantiatedLoadingBar.fillAmount += (1.0f / 100);
+            yield return new WaitForSeconds(0.03f);
+        }
+
+        // Start Sound
+
+        yield return new WaitForSecondsRealtime(2f);
+        instantiated.SetActive(false);
+        cowboyInstantiated.SetActive(false);
+        instantiatedLoadingBara.gameObject.SetActive(false);
+        toShow.SetActive(true);
     }
 
     

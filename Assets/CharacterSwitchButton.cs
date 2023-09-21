@@ -113,7 +113,7 @@ public class CharacterSwitchButton : MonoBehaviour
                 currentPosX = 0;
 
                 deltaMove = 0;
-                rect.anchoredPosition = new Vector2((characterId * 1000) - 55, rect.anchoredPosition.y);
+                rect.anchoredPosition = new Vector2(-(characterId * 1000) - 55, rect.anchoredPosition.y);
 
             }
             else

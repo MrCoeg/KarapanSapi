@@ -10,6 +10,8 @@ public class Susu : Collectible
     public override void Use()
     {
         CharacterMovement movement = GameObject.FindGameObjectWithTag("Character").GetComponent<CharacterMovement>();
-        movement.ManipulateSpeedLimit(speedAcceleration, speedDuration[upgradeProgress]);
+        movement.Immune(speedDuration[upgradeProgress]);
+
+        movement.manipulate(speedAcceleration, speedDuration[upgradeProgress]);
     }
 }

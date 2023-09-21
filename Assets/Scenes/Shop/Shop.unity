@@ -3123,23 +3123,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8798184979794576430, guid: 0f71f4a9b2690754e97b1c0f3a1bd133, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8798184979794576431, guid: 0f71f4a9b2690754e97b1c0f3a1bd133, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8798184979794576431, guid: 0f71f4a9b2690754e97b1c0f3a1bd133, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8798184979794576431, guid: 0f71f4a9b2690754e97b1c0f3a1bd133, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 521.9166
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8798184979794576431, guid: 0f71f4a9b2690754e97b1c0f3a1bd133, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -50
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f71f4a9b2690754e97b1c0f3a1bd133, type: 3}
@@ -4621,7 +4621,8 @@ MonoBehaviour:
   slidingRight: 0
   listSapi:
   - {fileID: 11400000, guid: d594a94742778a24798192d024948d2c, type: 2}
-  - {fileID: 11400000, guid: 54aaa210d83380a409a46beada0679d0, type: 2}
+  - {fileID: 11400000, guid: e78b547e18039c34d8d6d5617f7fb221, type: 2}
+  - {fileID: 11400000, guid: 213e67f60b9fd014ca9a7b40753b4696, type: 2}
   parent: {fileID: 964564854}
   currentPlayerProperties: {fileID: 11400000, guid: df6079148acbd6f4ab0f6e281fce7b4b, type: 2}
 --- !u!114 &2081851537

@@ -50,6 +50,11 @@ public class EnemyMovement : MonoBehaviour
         m_speedLimit = stats.speedLimit;
     }
 
+    public void manipulate(float manipulationSpeed, float duration)
+    {
+        StartCoroutine(ManipulateSpeedLimit(manipulationSpeed, duration));
+    }
+
 
     IEnumerator StartUp()
     {

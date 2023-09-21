@@ -75,7 +75,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2029762577
-  m_SortingLayer: 2
+  m_SortingLayer: 5
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: af1a0d07e21b46145925309327725b34, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -126,6 +126,14 @@ MonoBehaviour:
   isNitro: 0
   moveLineSpeed: 0
   cameraCinemachine: {fileID: 0}
+  m_buttonSFX: {fileID: 175661242415894708, guid: 1995b3e1c74450640ab574d071d45225, type: 3}
+  equipmentButton: {fileID: 0}
+  equipmentImage: {fileID: 0}
+  gas: {fileID: 0}
+  equipmentSprite:
+  - {fileID: 21300000, guid: e40ffd74e0524124a9cea761ad724257, type: 3}
+  - {fileID: 21300000, guid: 0c016970b60fb994b98de354c3a74d3c, type: 3}
+  immune: 0
 --- !u!61 &-1049341963687540517
 BoxCollider2D:
   m_ObjectHideFlags: 0
