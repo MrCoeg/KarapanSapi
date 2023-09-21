@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using Cinemachine;
+using UnityEngine.SceneManagement;
 
 public class MapTracker : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class MapTracker : MonoBehaviour
     public TextMeshProUGUI textHastag;
     public CinemachineVirtualCamera camerastop;
 
+    public Image quotes;
     public Image winPallete;
 
     public GameObject[] toHide;
@@ -59,13 +61,34 @@ public class MapTracker : MonoBehaviour
     IEnumerator Win()
     {
         var loader = GameObject.Find("Scene Loader").GetComponent<SceneLoader>();
-
-        yield return new WaitForSeconds(2);
-        StartCoroutine( loader.callAnimation(toShow));
-        for (int i = 0; i < toHide.Length; i++)
+        var cur = Resources.Load<PlayerProperties>("Player Properties");
+        if (textHastag.text == "#1")
         {
-            toHide[i].SetActive(false);
+            winPallete.sprite = cur.currentProperties.currentSapi.winRace;
+
+            yield return new WaitForSeconds(2);
+            StartCoroutine(loader.callAnimation(toShow));
+            for (int i = 0; i < toHide.Length; i++)
+            {
+                toHide[i].SetActive(false);
+            }
         }
+        else
+        {
+            winPallete.sprite = cur.currentProperties.currentSapi.loseRace;
+            yield return new WaitForSeconds(2);
+            var progress = SceneManager.GetActiveScene().buildIndex - 2;
+
+            if (progress >= cur.progress)
+            {
+                cur.progress += 1;
+            }
+
+            StartCoroutine(loader.ChangeSceneAnimation(2));
+
+        }
+
+
     }
 
 }

@@ -26,9 +26,11 @@ public class CharacterSwitchButton : MonoBehaviour
     public Sapi[] listSapi;
     public Transform parent;
     public CurrentPlayerProperties currentPlayerProperties;
+    private PlayerProperties playerProperties;
 
     private void Awake()
     {
+        playerProperties = Resources.Load<PlayerProperties>("Player Properties");
 
         for (int i = 0; i < listSapi.Length; i++)
         {
@@ -48,6 +50,16 @@ public class CharacterSwitchButton : MonoBehaviour
 
     }
 
+    public void BeliSapi()
+    {
+        
+    }
+
+    public void GunakanSapi()
+    {
+
+    }
+
     public void slideLeft()
     {
         characterId -= 1;
@@ -62,20 +74,38 @@ public class CharacterSwitchButton : MonoBehaviour
         if (currentPlayerProperties.currentSapi.id == characterId)
         {
             digunakanButton.sprite = digunakanSprite[0];
+        }else if(currentPlayerProperties.currentSapi.id != characterId && playerProperties.ownedSapi.Contains(listSapi[characterId]))
+        {
+            digunakanButton.sprite = digunakanSprite[1];
         }
         else
         {
-            digunakanButton.sprite = digunakanSprite[1];
+            digunakanButton.sprite = digunakanSprite[2];
 
         }
 
-        Gunakan();
     }
 
-    public void Gunakan()
+    public void GunakanAtauBeli()
     {
+        if (currentPlayerProperties.currentSapi.id != characterId && playerProperties.ownedSapi.Contains(listSapi[characterId]))
+        {
+            currentPlayerProperties.currentSapi = listSapi[characterId];
 
-        currentPlayerProperties.currentSapi = listSapi[characterId];
+        }
+        else
+        {
+            if (playerProperties.money < 20)
+            {
+                return;
+            }
+            else
+            {
+                playerProperties.ownedSapi.Add(listSapi[characterId]);
+                currentPlayerProperties.currentSapi = listSapi[characterId];
+                digunakanButton.sprite = digunakanSprite[0];
+            }
+        }
     }
 
     public void slideRight()
@@ -93,9 +123,13 @@ public class CharacterSwitchButton : MonoBehaviour
         {
             digunakanButton.sprite = digunakanSprite[0];
         }
-        else
+        else if (currentPlayerProperties.currentSapi.id != characterId && playerProperties.ownedSapi.Contains(listSapi[characterId]))
         {
             digunakanButton.sprite = digunakanSprite[1];
+        }
+        else
+        {
+            digunakanButton.sprite = digunakanSprite[2];
 
         }
     }

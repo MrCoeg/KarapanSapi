@@ -12,6 +12,8 @@ public class Biodata : MonoBehaviour
     private void Awake()
     {
         id = switchchar.characterId;
+        image.sprite = biodata[id];
+
     }
 
     private void Update()

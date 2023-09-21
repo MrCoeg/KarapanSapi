@@ -10,6 +10,13 @@ public class ssss : MonoBehaviour
     public Sprite[] sprite;
     public Image imageOnOf;
 
+
+    public Button help;
+
+    public GameObject[] toHide;
+
+    public GameObject Tutorial;
+    public GameObject Tentang;
     private void Awake()
     {
         buttonSFX = Instantiate(m_buttonSFX).GetComponent<AudioSource>();
@@ -35,6 +42,24 @@ public class ssss : MonoBehaviour
         for (int i = 0; i < music.Length; i++)
         {
             music[i].GetComponent<AudioSource>().mute = !playerProperties.bgm;
+        }
+    }
+
+    public void TutorialPage()
+    {
+        Tutorial.SetActive(true);
+        for (int i = 0; i < toHide.Length; i++)
+        {
+            toHide[i].SetActive(false);
+        }
+    }
+
+    public void TentangPage()
+    {
+        Tentang.SetActive(true);
+        for (int i = 0; i < toHide.Length; i++)
+        {
+            toHide[i].SetActive(false);
         }
     }
 }

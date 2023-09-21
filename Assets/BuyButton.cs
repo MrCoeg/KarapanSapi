@@ -96,7 +96,6 @@ public class BuyButton : MonoBehaviour
         }
     }
 
-
     public void Tingkatkan(int index)
     {
         playerProperties.collectibles[index].upgradeProgress += 1;
@@ -118,6 +117,11 @@ public class BuyButton : MonoBehaviour
                 TaiCurrentProgress.text = "Durasi : " + tai.speedDuration[tai.upgradeProgress].ToString();
                 TaiNextProgress.text = "Max";
             }
+        }
+
+        if (playerProperties.money <= 5)
+        {
+            return;
         }
 
         if (index == 0)

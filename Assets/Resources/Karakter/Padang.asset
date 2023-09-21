@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Padang
   m_EditorClassIdentifier: 
   isOwned: 0
-  id: 0
+  id: 1
   speed: 1
   acceleration: 4
   speedLimit: 15
@@ -23,3 +23,7 @@ MonoBehaviour:
   prefabSapi: {fileID: 3295945724534919875, guid: eaf2b838b80852146ae439430ab7992c, type: 3}
   prefabSapiGameplay: {fileID: 0}
   playerProperties: {fileID: 11400000, guid: 6521f9adafc720b49a75d9a88f99252f, type: 2}
+  loseRace: {fileID: 21300000, guid: 36276b6f542adae489e434a1dbf4a17e, type: 3}
+  winRace: {fileID: 21300000, guid: 3602a08c23a5d8049ba4cdb76b33fe68, type: 3}
+  winReward: {fileID: 21300000, guid: f5b9231750713434693fb13ab1765d6e, type: 3}
+  orang: {fileID: 21300000, guid: 0f847e44b246a8f45976b28422374c1d, type: 3}

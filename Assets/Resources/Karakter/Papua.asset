@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Papua
   m_EditorClassIdentifier: 
   isOwned: 0
-  id: 0
+  id: 2
   speed: 1
   acceleration: 3
   speedLimit: 12
@@ -23,3 +23,7 @@ MonoBehaviour:
   prefabSapi: {fileID: 3295945724534919875, guid: c9895cb0ee3b131428b62ace16c20167, type: 3}
   prefabSapiGameplay: {fileID: 1892815497644769706, guid: 3a3add8c534c33845b79ca4c5f525e18, type: 3}
   playerProperties: {fileID: 11400000, guid: 6521f9adafc720b49a75d9a88f99252f, type: 2}
+  loseRace: {fileID: 21300000, guid: 934cf15a55b4ba44a82231b1432bccde, type: 3}
+  winRace: {fileID: 21300000, guid: 608eceb98005bdc42bdcffdda18d9fa9, type: 3}
+  winReward: {fileID: 21300000, guid: 34095e1604abde648929cec80bf90a77, type: 3}
+  orang: {fileID: 21300000, guid: 7829b41bd9cc09c4a8fa18a9845b5970, type: 3}

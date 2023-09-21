@@ -23,3 +23,7 @@ MonoBehaviour:
   prefabSapi: {fileID: 9039367494895294515, guid: 988fe27c947bf924888c69a2f86db585, type: 3}
   prefabSapiGameplay: {fileID: 5771148853490944268, guid: 2e81523efe2e0334da1fbb4992acfb7f, type: 3}
   playerProperties: {fileID: 11400000, guid: 6521f9adafc720b49a75d9a88f99252f, type: 2}
+  loseRace: {fileID: 21300000, guid: ea9799164c20c8f42aadafcc54c03990, type: 3}
+  winRace: {fileID: 21300000, guid: 5803e171cfddbda4381c15343ada35e5, type: 3}
+  winReward: {fileID: 21300000, guid: 169a7d87205841a449f120a5ad88c825, type: 3}
+  orang: {fileID: 21300000, guid: afca52151ebc3ca4db189c17da595def, type: 3}

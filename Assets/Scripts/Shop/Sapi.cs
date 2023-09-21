@@ -17,6 +17,13 @@ public class Sapi : Item
     public GameObject prefabSapi;
     public GameObject prefabSapiGameplay;
     public PlayerProperties playerProperties;
+
+    public Sprite loseRace;
+    public Sprite winRace;
+    public Sprite winReward;
+    public Sprite orang;
+
+
     private void Awake()
     {
         playerProperties = Resources.Load<PlayerProperties>("Player Properties");
