@@ -123,6 +123,10 @@ public class BuyButton : MonoBehaviour
         {
             return;
         }
+        else
+        {
+            playerProperties.money -= 5;
+        }
 
         if (index == 0)
         {

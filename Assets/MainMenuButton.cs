@@ -5,17 +5,37 @@ using UnityEngine;
 public class MainMenuButton : MonoBehaviour
 {
     public SceneLoader sceneLoader;
+    PlayerProperties playerProperties;
+    int id;
 
     private void Awake()
     {
-        var playerProperties = Resources.Load<PlayerProperties>("Player Properties");
-        var music = GameObject.FindGameObjectsWithTag("BGM");
+        playerProperties = Resources.Load<PlayerProperties>("Player Properties");
 
-        for (int i = 0; i < music.Length; i++)
+        if (playerProperties.currentProperties.currentSapi != null)
         {
-            music[i].GetComponent<AudioSource>().mute = !playerProperties.bgm;
-        }
+            id = playerProperties.currentProperties.currentSapi.id;
+            var a = GameObject.FindGameObjectsWithTag("BGM");
+            for (int i = 0; i < 3; i++)
+            {
+                if (i != id)
+                {
+                    a[i].GetComponent<AudioSource>().mute = true;
+                }
+                else
+                {
+                    a[i].GetComponent<AudioSource>().mute = false;
+                    a[i].GetComponent<AudioSource>().Play();
+                }
 
+            }
+
+
+        }
+        else
+        {
+            id = -1;
+        }
     }
     public void Back()
     {
@@ -40,5 +60,28 @@ public class MainMenuButton : MonoBehaviour
     public void Setting()
     {
         StartCoroutine(sceneLoader.ChangeScene(4));
+    }
+
+    private void Update()
+    {
+        if ( playerProperties.currentProperties.currentSapi != null && id != playerProperties.currentProperties.currentSapi.id) 
+        {
+            id = playerProperties.currentProperties.currentSapi.id;
+
+            var a = GameObject.FindGameObjectsWithTag("BGM");
+            for (int i = 0; i < 3; i++)
+            {
+                if (i != id)
+                {
+                    a[i].GetComponent<AudioSource>().mute = true;
+                }
+                else
+                {
+                    a[i].GetComponent<AudioSource>().mute = false;
+                    a[i].GetComponent<AudioSource>().Play();
+                }
+                
+            }
+        }
     }
 }

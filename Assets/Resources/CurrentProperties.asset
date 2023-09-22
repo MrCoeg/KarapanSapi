@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc467d3e54a66b94eb62f703db57f5ec, type: 3}
   m_Name: CurrentProperties
   m_EditorClassIdentifier: 
-  currentSapi: {fileID: 11400000, guid: 213e67f60b9fd014ca9a7b40753b4696, type: 2}
+  currentSapi: {fileID: 0}

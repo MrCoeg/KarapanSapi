@@ -16,8 +16,7 @@ MonoBehaviour:
   pusaka: 0
   energy: 50
   progress: 3
-  ownedSapi:
-  - {fileID: 11400000, guid: 213e67f60b9fd014ca9a7b40753b4696, type: 2}
+  ownedSapi: []
   collectibles:
   - {fileID: 11400000, guid: f34fef38dc5c8694da1072b7e24cd107, type: 2}
   - {fileID: 11400000, guid: 0025dc625c79224449930f65e3012ef0, type: 2}
